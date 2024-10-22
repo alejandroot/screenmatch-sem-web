@@ -44,26 +44,9 @@ public class Principal {
 			listDadosTemporadas.add(dadosTemporada);
 		}
 		
-		listDadosTemporadas.forEach(System.out::println);
-		//listDadosTemporadas.forEach(dadoTemporada -> System.out.println(dadoTemporada));
-		
-//		for(int i = 0; i < dadosSerie.totalTemporadas(); i++) {
-//			List<DadosEpisodio> listDadosEpisodio = listDadosTemporadas.get(i).episodios();
-//			for(int j = 0; j < listDadosEpisodio.size(); j++) {
-//				System.out.println(listDadosEpisodio.get(j).titulo());
-//			}
-//		}
-		
 		listDadosTemporadas.forEach(temp -> temp.episodios().forEach(ep -> System.out.println(ep.titulo())));
 		
-		List<String> listNomes = Arrays.asList("Jacque", "Iasmin", "Paulo", "Rodrigo", "Nico");
 		
-		listNomes.stream()
-			.sorted()
-			.limit(3)
-			.filter(n -> n.startsWith("N"))
-			.map(n-> n.toUpperCase())
-			.forEach(System.out::println);
 		
 		
 		
